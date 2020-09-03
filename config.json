@@ -1,0 +1,24 @@
+{
+
+    "params":
+    {
+    	"local_server": "True",
+    	"local_uri":"mysql://root:@localhost/blog1",
+    	"prod_uri":"mysql://root:@localhost/blog1",
+    	"fb_url":"https://facebook.com",
+    	"tw_url":"https://twitter.com",
+    	"gh_url":"https://github.com",
+    	"blog_name":"Ovi's Blog",
+    	"tagline":"A Personal Blog",
+    	"gmail-user":"ovi.rehman30@gmail.com",
+    	"gmail-password":"owaisxx15",
+        "about_text":"aww yeah",
+        "no_of_posts":2,
+        "login_image":"login.svg",
+        "admin_user":"ov",
+        "admin_password":"",
+        "upload_location":"D:\\Owais\\oviweb\\static\\"
+    }
+
+
+}
