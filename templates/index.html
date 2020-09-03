@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% block body %}
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('    {{ url_for('static', filename='img/home-bg.jpg') }}    ')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>{{params['blog_name']}}</h1>
+            <span class="subheading">{{params['tagline']}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+
+        <!-- post block division begins-->
+        <!-- Todo: Fetch it using for loop from the database-->
+
+        {% for post in posts %}
+        <!-- post is variable we made right now that goes into posts that is in th home class in ovi.py-->
+
+        
+        <div class="post-preview">
+          <a href="/post/{{post.slug}}">
+            <h2 class="post-title">
+              {{post.title}}
+            </h2>
+            <h3 class="post-subtitle">
+              {{post.tagline}}
+            </h3>
+          </a>
+          <p class="post-meta">Posted by
+            <a href="#">Start Bootstrap</a>
+            on {{post.date}}</p>
+        </div>
+        {{post.content[0:43]}}...
+        <hr>
+      </a></li>
+        {% endfor %}
+
+
+        <!-- Pager -->
+        <div class="clearfix">
+          <a class="btn btn-primary float-left" href="{{prev}}">&larr; Previous</a> 
+          <a class="btn btn-primary float-right" href="{{next}}">Next &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
